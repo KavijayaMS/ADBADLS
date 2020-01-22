@@ -4,8 +4,12 @@
 
 -- COMMAND ----------
 
+-- MAGIC %scala dbutils.fs.unmount("/mnt/data")
+
+-- COMMAND ----------
+
 -- MAGIC %scala
--- MAGIC val configs = Map(
+-- MAGIC val configs1 = Map(
 -- MAGIC   "fs.azure.account.auth.type" -> "OAuth",
 -- MAGIC   "fs.azure.account.oauth.provider.type" -> "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
 -- MAGIC   "fs.azure.account.oauth2.client.id" -> "73b7b0b7-9f6d-49fa-b332-aa1457e511f6",
